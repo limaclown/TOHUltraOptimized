@@ -29,8 +29,6 @@
 <br>
 
 [![Total Downloads](https://img.shields.io/github/downloads/Limeau/TownofHost-Optimized/total)](../../releases)
-
-### :star: [Project: Lotus](https://github.com/discus-sions/TownOfHost-TheOtherRoles) (PL/TOH:TO
 ---
 This project is licensed under the GNU General Public License version 3.0. For more details, please refer to the [LICENSE](https://github.com/Limeau/TownofHost-Optimized/blob/main/LICENSE) file.
 ---
