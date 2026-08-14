@@ -3,7 +3,7 @@
 
 <br>
 
-<img align="left" alt="Cover" src="["]https://github.com/limaclown/TOHUltraOptimized/blob/main/Untitled17_20260814122219.png" width="50%" height="300" /> 
+<img align="left" alt="Cover" src="https://github.com/limaclown/TOHUltraOptimized/blob/main/Untitled17_20260814122219.png" width="50%" height="300" /> 
 
 <p align="right">
   
