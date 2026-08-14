@@ -20,15 +20,7 @@
 <a href="https://github.com/limaclown/TOHUltraOptimized/releases/latest" target="_blank"><img src="https://img.shields.io/badge/Latest Version%20-%231DA1F2.svg?&style=for-the-badge&logo=github&logoColor=white&color=181717"/></a>
 </center>
 
-
-
 </p>
-
----
-
-<br>
-
-[![Total Downloads](https://img.shields.io/github/downloads/Limeau/TownofHost-Optimized/total)](../../releases)
 ---
 This project is licensed under the GNU General Public License version 3.0. For more details, please refer to the [LICENSE](https://github.com/limaclown/TOHUltraOptimized/blob/main/LICENSE) file.
 ---
