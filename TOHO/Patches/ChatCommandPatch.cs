@@ -480,6 +480,10 @@ internal class ChatCommands
                     Utils.SendMessage("All roles disabled!");
                     break;
                 
+                case "/ismoddedregion":
+                    Utils.SendMessage($"{!GameStates.IsVanillaServer}");
+                    break;
+                
                 case "/setplayers":
                 case "/maxjogadores":
                 case "/设置最大玩家数":
@@ -2166,6 +2170,9 @@ internal class ChatCommands
                 return;
             case CustomGameMode.UltimateTeam:
                 Utils.SendMessage(GetString("ModeDescribe.UltimateTeam"), playerId);
+                return;
+            case CustomGameMode.SharksAndMinnows:
+                Utils.SendMessage(GetString("ModeDescribe.SharksAndMinnows"), playerId);
                 return;
             case CustomGameMode.FourCorners:
                 Utils.SendMessage(GetString("ModeDescribe.FourCorners"), playerId);

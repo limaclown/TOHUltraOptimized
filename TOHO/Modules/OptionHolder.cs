@@ -21,7 +21,8 @@ public enum CustomGameMode
     UltimateTeam = 0x04,
     KOTH = 0x05,
     FourCorners = 0x06,
-    HidenSeekTOHO = 0x08, // HidenSeekTOHO must be after other Gamemodes
+    SharksAndMinnows = 0x07,
+    HidenSeekTOHO = 0x09, // HidenSeekTOHO must be after other Gamemodes
     All = int.MaxValue
 }
 
@@ -60,6 +61,7 @@ public static class Options
             3 => CustomGameMode.UltimateTeam,
             4 => CustomGameMode.FourCorners,
             5 => CustomGameMode.KOTH,
+            6 => CustomGameMode.SharksAndMinnows,
             9 => CustomGameMode.HidenSeekTOHO,
             _ => CustomGameMode.Standard
         };
@@ -71,6 +73,7 @@ public static class Options
             CustomGameMode.UltimateTeam => 3,
             CustomGameMode.FourCorners => 4,
             CustomGameMode.KOTH => 5,
+            CustomGameMode.SharksAndMinnows => 6,
             CustomGameMode.HidenSeekTOHO => 5, // HidenSeekTOHO must be after other Gamemodes
             _ => 0
         };
@@ -83,6 +86,7 @@ public static class Options
         "UltimateTeam",
         "FourCorners",
         "KOTH",
+        "SharksAndMinnows",
 
         "Hide&SeekTOHO", // HidenSeekTOHO must be after other Gamemodes
     ];
@@ -215,6 +219,7 @@ public static class Options
     public static OptionItem AllowOnlyWhiteList;
 
     public static OptionItem KickOtherPlatformPlayer;
+    public static OptionItem KickModdedPlayer;
     public static OptionItem OptKickAndroidPlayer;
     public static OptionItem OptKickIphonePlayer;
     public static OptionItem OptKickXboxPlayer;
@@ -1256,6 +1261,7 @@ public static class Options
         AllowOnlyWhiteList = BooleanOptionItem.Create(60061, "AllowOnlyWhiteList", false, TabGroup.SystemSettings, false);
 
         KickOtherPlatformPlayer = BooleanOptionItem.Create(60070, "KickOtherPlatformPlayer", false, TabGroup.SystemSettings, false);
+        KickModdedPlayer = BooleanOptionItem.Create(60163, "KickModdedPlayer", false, TabGroup.SystemSettings, false);
         OptKickAndroidPlayer = BooleanOptionItem.Create(60071, "OptKickAndroidPlayer", false, TabGroup.SystemSettings, false)
             .SetParent(KickOtherPlatformPlayer);
         OptKickIphonePlayer = BooleanOptionItem.Create(60072, "OptKickIphonePlayer", false, TabGroup.SystemSettings, false)
@@ -1294,17 +1300,7 @@ public static class Options
             .SetParent(AllowStartCommand)
             .SetValueFormat(OptionFormat.Seconds);
 
-        //ApplyReminderMsg = BooleanOptionItem.Create(60130, "ApplyReminderMsg", false, TabGroup.SystemSettings, false);
-        /*TimeForReminder = IntegerOptionItem.Create(60131, "TimeForReminder", new(0, 99, 1), 3, TabGroup.SystemSettings, false)
-            .SetParent(TimeForReminder)
-            .SetValueFormat(OptionFormat.Seconds); */
-        /*AutoKickStopWords = BooleanOptionItem.Create(60160, "AutoKickStopWords", false, TabGroup.SystemSettings, false);
-        AutoKickStopWordsTimes = IntegerOptionItem.Create(60161, "AutoKickStopWordsTimes", new(0, 99, 1), 3, TabGroup.SystemSettings, false)
-            .SetParent(AutoKickStopWords)
-            .SetValueFormat(OptionFormat.Times);
-        AutoKickStopWordsAsBan = BooleanOptionItem.Create(60162, "AutoKickStopWordsAsBan", false, TabGroup.SystemSettings, false)
-            .SetParent(AutoKickStopWords);
-        AutoWarnStopWords = BooleanOptionItem.Create(60163, "AutoWarnStopWords", false, TabGroup.SystemSettings, false); */
+        
         MinWaitAutoStart = FloatOptionItem.Create(60170, "MinWaitAutoStart", new(0f, 10f, 0.5f), 1.5f, TabGroup.SystemSettings, false).SetHeader(true);
         MaxWaitAutoStart = FloatOptionItem.Create(60180, "MaxWaitAutoStart", new(0f, 10f, 0.5f), 1.5f, TabGroup.SystemSettings, false);
         PlayerAutoStart = IntegerOptionItem.Create(60190, "PlayerAutoStart", new(1, 100, 1), 14, TabGroup.SystemSettings, false)
@@ -1412,6 +1408,8 @@ public static class Options
         UltimateTeam.SetupCustomOption();
         
         FourCorners.SetupCustomOption();
+
+        SharksAndMinnows.SetupCustomOption();
 
         // Hide & Seek
         
