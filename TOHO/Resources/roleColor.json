@@ -4,12 +4,14 @@
   "Scientist": "#8ee98e",
   "GuardianAngel": "#77e6d1",
   "Noisemaker": "#9100e3",
+  "Judge": "#6e6d68",
   "Tracker": "#1bb313",
   "CrewmateTOHO": "#8cffff",
   "EngineerTOHO": "#ff6a00",
   "ScientistTOHO": "#8ee98e",
   "GuardianAngelTOHO": "#77e6d1",
   "NoisemakerTOHO": "#9100e3",
+  "JudgeTOHO": "#6e6d68",
   "TrackerTOHO": "#1bb313",
   "EvilMini": "#ff1919",
   "NiceMini": "#edc240",
@@ -47,7 +49,7 @@
   "Medic": "#00ff97",
   "FortuneTeller": "#882c83",
   "Glitch": "#39ff14",
-  "Judge": "#f8d85a",
+  "Justice": "#f8d85a",
   "Lookout": "#2a52be",
   "Mortician": "#333c49",
   "Medium": "#a200ff",
@@ -387,5 +389,6 @@
   "Rebel": "#40415c",
   "RebelLeader": "#40415c",
   "Shark": "#004ec2",
-  "Minnow": "#9cb5db"
+  "Minnow": "#9cb5db",
+  "WeepingAngel": "#70797d"
 }

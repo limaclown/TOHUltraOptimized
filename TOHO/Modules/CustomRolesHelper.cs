@@ -53,6 +53,7 @@ public static class CustomRolesHelper
             CustomRoles.ScientistTOHO => CustomRoles.Scientist,
             CustomRoles.EngineerTOHO => CustomRoles.Engineer,
             CustomRoles.NoisemakerTOHO => CustomRoles.Noisemaker,
+            CustomRoles.JudgeTOHO => CustomRoles.Judge,
             CustomRoles.TrackerTOHO => CustomRoles.Tracker,
             CustomRoles.ViperTOHO => CustomRoles.Viper,
             CustomRoles.DetectiveTOHO => CustomRoles.Detective,
@@ -208,7 +209,7 @@ public static class CustomRolesHelper
                 CustomRoles.Crusader or
                 CustomRoles.Overseer or
                 CustomRoles.Jailer or
-                CustomRoles.Judge or
+                CustomRoles.Justice or
                 CustomRoles.Medic or
                 CustomRoles.Medium or
                 CustomRoles.Monarch or
@@ -242,6 +243,7 @@ public static class CustomRolesHelper
             CustomRoles.DarkFairy or
             CustomRoles.Assassin or
             CustomRoles.Vaporizer or
+            CustomRoles.WeepingAngel or
             CustomRoles.Falcon or
             CustomRoles.Clock or
             CustomRoles.TraineeB or
@@ -602,7 +604,7 @@ public static class CustomRolesHelper
                     return false;
                 if (pc.Is(CustomRoles.EvilGuesser)
                     || pc.Is(CustomRoles.NiceGuesser)
-                    || pc.Is(CustomRoles.Judge)
+                    || pc.Is(CustomRoles.Justice)
                     || pc.Is(CustomRoles.CopyCat)
                     || pc.Is(CustomRoles.Doomsayer)
                     || pc.Is(CustomRoles.Nemesis)
@@ -1381,6 +1383,7 @@ public static class CustomRolesHelper
             CustomRoles.GuardianAngel => RoleTypes.GuardianAngel,
             CustomRoles.Shapeshifter => RoleTypes.Shapeshifter,
             CustomRoles.Noisemaker => RoleTypes.Noisemaker,
+            CustomRoles.Judge => RoleTypes.Judge,
             CustomRoles.Phantom => RoleTypes.Phantom,
             CustomRoles.Tracker => RoleTypes.Tracker,
             CustomRoles.Detective => RoleTypes.Detective,
@@ -1398,6 +1401,7 @@ public static class CustomRolesHelper
             CustomRoles.GuardianAngel => RoleTypes.GuardianAngel,
             CustomRoles.Shapeshifter => RoleTypes.Shapeshifter,
             CustomRoles.Noisemaker => RoleTypes.Noisemaker,
+            CustomRoles.Judge => RoleTypes.Judge,
             CustomRoles.Phantom => RoleTypes.Phantom,
             CustomRoles.Tracker => RoleTypes.Tracker,
             CustomRoles.Detective => RoleTypes.Detective,
@@ -1444,6 +1448,7 @@ public static class CustomRolesHelper
             CustomRoles.GuardianAngel or
             CustomRoles.Shapeshifter or
             CustomRoles.Noisemaker or
+            CustomRoles.Judge or
             CustomRoles.Phantom or
             CustomRoles.Tracker or 
             CustomRoles.Viper or 
@@ -1477,6 +1482,7 @@ public static class CustomRolesHelper
                 CustomRoles.GuardianAngel => roleOpt.GetNumPerGame(RoleTypes.GuardianAngel),
                 CustomRoles.Shapeshifter => roleOpt.GetNumPerGame(RoleTypes.Shapeshifter),
                 CustomRoles.Noisemaker => roleOpt.GetNumPerGame(RoleTypes.Noisemaker),
+                CustomRoles.Judge => roleOpt.GetNumPerGame(RoleTypes.Judge),
                 CustomRoles.Phantom => roleOpt.GetNumPerGame(RoleTypes.Phantom),
                 CustomRoles.Tracker => roleOpt.GetNumPerGame(RoleTypes.Tracker),
                 CustomRoles.Viper => roleOpt.GetNumPerGame(RoleTypes.Viper),
@@ -1503,6 +1509,7 @@ public static class CustomRolesHelper
                 CustomRoles.GuardianAngel => roleOpt.GetChancePerGame(RoleTypes.GuardianAngel),
                 CustomRoles.Shapeshifter => roleOpt.GetChancePerGame(RoleTypes.Shapeshifter),
                 CustomRoles.Noisemaker => roleOpt.GetChancePerGame(RoleTypes.Noisemaker),
+                CustomRoles.Judge => roleOpt.GetChancePerGame(RoleTypes.Judge),
                 CustomRoles.Phantom => roleOpt.GetChancePerGame(RoleTypes.Phantom),
                 CustomRoles.Tracker => roleOpt.GetChancePerGame(RoleTypes.Tracker),
                 CustomRoles.Viper => roleOpt.GetChancePerGame(RoleTypes.Viper),
@@ -1565,6 +1572,7 @@ public static class CustomRolesHelper
            CustomRoles.DarkFairy => CountTypes.DarkFairy,
            CustomRoles.Assassin => CountTypes.Assassin,
            CustomRoles.Vaporizer => CountTypes.Vaporizer,
+           CustomRoles.WeepingAngel => CountTypes.WeepingAngel,
            CustomRoles.Clock => CountTypes.Clock,
            CustomRoles.Falcon => CountTypes.Falcon,
            CustomRoles.TraineeB => CountTypes.Trainee,
@@ -1657,6 +1665,7 @@ public static class CustomRolesHelper
             CustomRoles.DarkFairy => CustomWinner.DarkFairy,
             CustomRoles.Assassin => CustomWinner.Assassin,
             CustomRoles.Vaporizer => CustomWinner.Vaporizer,
+            CustomRoles.WeepingAngel => CustomWinner.WeepingAngel,
             CustomRoles.Clock => CustomWinner.Clock,
             CustomRoles.Falcon => CustomWinner.Falcon,
             CustomRoles.TraineeB => CustomWinner.Trainee,
@@ -1725,6 +1734,7 @@ public static class CustomRolesHelper
             CountTypes.DarkFairy => CustomRoles.DarkFairy,
             CountTypes.Assassin => CustomRoles.Assassin,
             CountTypes.Vaporizer => CustomRoles.Vaporizer,
+            CountTypes.WeepingAngel => CustomRoles.WeepingAngel,
             CountTypes.Clock => CustomRoles.Clock,
             CountTypes.Falcon => CustomRoles.Falcon,
             CountTypes.Trainee => CustomRoles.TraineeB,
@@ -1843,6 +1853,7 @@ public enum CountTypes
     Darkened,
     Assassin,
     Vaporizer,
+    WeepingAngel,
     Falcon,
     Clock,
     Trainee,

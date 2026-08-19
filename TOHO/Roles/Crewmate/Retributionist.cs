@@ -232,14 +232,14 @@ internal class Retributionist : RoleBase
         public static void Postfix(MeetingHud __instance)
         {
             if (PlayerControl.LocalPlayer.Is(CustomRoles.Retributionist) && !PlayerControl.LocalPlayer.IsAlive())
-                CreateJudgeButton(__instance);
+                CreateJusticeButton(__instance);
         }
     }
-    public static void CreateJudgeButton(MeetingHud __instance)
+    public static void CreateJusticeButton(MeetingHud __instance)
     {
         foreach (var pva in __instance.playerStates.ToArray())
         {
-            var pc = GetPlayerById(pva.TargetPlayerId);
+            var pc = GetPlayerById(pva.PlayerId);
             if (pc == null || !pc.IsAlive()) continue;
 
             GameObject template = pva.Buttons.transform.Find("CancelButton").gameObject;
@@ -250,7 +250,7 @@ internal class Retributionist : RoleBase
             renderer.sprite = CustomButton.Get("MeetingKillButton");
             PassiveButton button = targetBox.GetComponent<PassiveButton>();
             button.OnClick.RemoveAllListeners();
-            button.OnClick.AddListener((UnityEngine.Events.UnityAction)(() => RetributionistOnClick(pva.TargetPlayerId/*, __instance*/)));
+            button.OnClick.AddListener((UnityEngine.Events.UnityAction)(() => RetributionistOnClick(pva.PlayerId/*, __instance*/)));
         }
     }
 }

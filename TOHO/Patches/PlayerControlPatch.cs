@@ -1600,7 +1600,7 @@ class FixedUpdateInNormalGamePatch
                                 partnerPlayer.Data.IsDead = true;
                                 partnerPlayer.RpcExileV2();
                                 Main.PlayerStates[partnerPlayer.PlayerId].SetDead();
-                                if (MeetingHud.Instance?.state is MeetingHud.VoteStates.Discussion or MeetingHud.VoteStates.NotVoted or MeetingHud.VoteStates.Voted)
+                                if (MeetingHud.Instance?.state is MeetingHud.MeetingStates.Discussion or MeetingHud.MeetingStates.NotVoted or MeetingHud.MeetingStates.Voted)
                                 {
                                     MeetingHud.Instance?.CheckForEndVoting();
                                 }
@@ -2179,6 +2179,7 @@ class PlayerControlLocalSetRolePatch
                 RoleTypes.Engineer => CustomRoles.EngineerTOHO,
                 RoleTypes.Shapeshifter => CustomRoles.ShapeshifterTOHO,
                 RoleTypes.Noisemaker => CustomRoles.NoisemakerTOHO,
+                RoleTypes.Judge => CustomRoles.JudgeTOHO,
                 RoleTypes.Phantom => CustomRoles.PhantomTOHO,
                 RoleTypes.Tracker => CustomRoles.TrackerTOHO,
                 RoleTypes.Viper => CustomRoles.ViperTOHO,
